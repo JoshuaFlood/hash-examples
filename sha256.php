@@ -41,7 +41,7 @@ function getRandomString($n) {
 
 // To finally create our salt, we use PHP's built-in `time()` function to grab the current UNIX timestamp and then append a random, 256-bit string to it.
 
-$salt = $timestamp . getRandomString(256);
+$salt = time() . getRandomString(256);
 
 
 ///
