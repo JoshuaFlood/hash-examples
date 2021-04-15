@@ -2,17 +2,17 @@
 
 // Basic example of SHA256 hashing algorithm
 
-///
-// Creating a salt
-///
-
 // In PHP, the `hash()` function is used to create a hash.
-// Note that some algorithms can be implemented independently, i.e. `sha256()`. Specifications for all of these can be found on the php.net website.
+// Note that some algorithms can be implemented independently, i.e. `sha256()`.
 
 // In this scenario, our aim is to create a secure hash from the user's password.
 
-// As is mentioned in the PHP documentation, the length and variability of the string provided to the `hash()`
-// function are the important factors in heightening security.
+// As is mentioned in the PHP documentation (all built-in functions can be reviewed at https://php.net/),
+// the length and variability of the string provided to the `hash()` function are the important factors in heightening security.
+
+///
+// Generating a salt
+///
 
 // Working with large numbers of users, it is likely that some share the same password, username etc. and so creating a hash solely using any
 // of these strings would not provide a great deal of security.
