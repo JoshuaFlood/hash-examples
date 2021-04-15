@@ -3,16 +3,6 @@
 // Basic example of SHA256 hashing algorithm
 
 ///
-// User credentials
-///
-
-// In a production environment, the $username and $password variables would be retrieved dynamically from a form completed by the user.
-// In this example, they are hardcoded:
-
-$username = 'User'; // The username entered by the user.
-$password = 'pass123'; // The password entered by the user.
-
-///
 // Creating a salt
 ///
 
@@ -62,7 +52,7 @@ $salt = $timestamp . getRandomString(256);
 
 // The first argument of the `hash()` function is a string which defines the algorithm used in hashing. The second argument is the data to be hashed.
 
-$saltPasswordCombination = hash('sha256', $salt . $password);
+$saltPasswordCombination = hash('sha256', $salt . 'Password123');
 
 ///
 // Additional notes
