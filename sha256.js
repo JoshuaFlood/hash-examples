@@ -3,6 +3,8 @@
 // In JavaScript, no native function exists to generate an SHA256 hash and so this functionality has been borrowed from the following website:
 // https://geraintluff.github.io/sha256/
 
+// It may provide greater clarity to compare the additional code in this file with its replacement `hash()` function within the `sha256.php` file.
+
 function hash(ascii) {
 	function rightRotate(value, amount) {
 		return (value>>>amount) | (value<<(32 - amount));
