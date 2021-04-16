@@ -178,7 +178,7 @@ let salt = Date.now() + getRandomString(256);
 // If you would like me to include examples of other algorithms then please let me know which algorithms
 // you would like to implement in the 'issues' section of this repository.
 
-let saltPasswordCombination = SHA256($salt + 'Password123');
+let saltPasswordCombination = SHA256(salt + 'Password123');
 
 
 ///
