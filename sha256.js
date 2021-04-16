@@ -173,8 +173,8 @@ let salt = Date.now() + getRandomString(256);
 // Generating a hash
 ///
 
-// Once we have our salt, we attach it as a prefix to the user's password and pass it as a parameter to the `hash()` function.
-// Unlike the PHP example stored in this repo, the `hash()` function takes only one argument.
+// Once we have our salt, we attach it as a prefix to the user's password and pass it as a parameter to the `SHA256()` function.
+// Unlike the PHP example stored in this repo, the `SHA256()` function takes only one argument.
 // If you would like me to include examples of other algorithms then please let me know which algorithms
 // you would like to implement in the 'issues' section of this repository.
 
@@ -192,7 +192,7 @@ let saltPasswordCombination = SHA256($salt + 'Password123');
 // but the database would not store the user's password.
 
 // Whenever an existing user attempts to login to the site, the client makes a request to the server and retrieves the salt from the database.
-// The client executes the `hash()` function, using the salt from the database in place of the `salt` variable in the above example.
+// The client executes the `SHA256()` function, using the salt from the database in place of the `salt` variable in the above example.
 // The resulting hash is then sent back to the server where it is compared against the hash that was stored in the database when the user created their account.
 // If both hashes are the same, then the user must have provided the correct password and is allowed access to the site.
 // If the hashes are not the same, then the user must have provided an incorrect password and is not granted access to the site.
